@@ -1,10 +1,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.background = "light"
+
 require("config.lazy")
 
 require("mason").setup()
-
 
 require("nvim-tree").setup({
   sort = {
@@ -25,4 +26,8 @@ vim.g.coq_settings = {
     keymap =  { jump_to_mark = "<c-\\" },
 }
 
+vim.cmd("colorscheme catppuccin-latte")
+
 require("mappings")
+
+vim.wo.relativenumber = true
