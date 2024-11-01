@@ -6,6 +6,7 @@ vim.o.background = "light"
 require("config.lazy")
 
 require("mason").setup()
+require("mason-lspconfig").setup()
 
 require("nvim-tree").setup({
   sort = {
@@ -27,6 +28,10 @@ vim.g.coq_settings = {
 }
 
 vim.cmd("colorscheme catppuccin-latte")
+
+local lspconfig = require('lspconfig')
+
+lspconfig.golangci_lint_ls.setup{}
 
 require("mappings")
 
