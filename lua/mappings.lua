@@ -29,4 +29,9 @@ map("v", "<", "<gv", opts)  -- Stay in visual mode when indenting
 map("v", ">", ">gv", opts)
 
 
+-- Toggleterm
+map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Terminal horizontal split" })
+map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { desc = "Terminal vertical split" })
+map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Terminal float" })
+
 
