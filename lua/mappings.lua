@@ -19,7 +19,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Tree
-map("n", "<leader>e", ":NvimTreeOpen<CR>", { noremap = false, silent = true })
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = false, silent = true })
 
 -- Insert mode mappings
 map("i", "jk", "<ESC>", opts)  -- Fast exit from insert mode
