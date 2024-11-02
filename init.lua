@@ -1,19 +1,23 @@
+-- cofig files 
+require("config.lazy")
+require("config.colorscheme")
+
+-- mason 
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+-- nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.o.background = "light"
-
-require("config.lazy")
-
-require("mason").setup()
-require("mason-lspconfig").setup()
+vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
   sort = {
     sorter = "case_sensitive",
   },
   view = {
-    width = 30,
+    width = 40,
   },
   renderer = {
     group_empty = true,
@@ -23,16 +27,17 @@ require("nvim-tree").setup({
   },
 })
 
+-- autocomplete 
 vim.g.coq_settings = {
     keymap =  { jump_to_mark = "<c-\\" },
 }
 
-vim.cmd("colorscheme catppuccin-latte")
-
+-- lsp
 local lspconfig = require('lspconfig')
 
-lspconfig.golangci_lint_ls.setup{}
-
+-- mappings
 require("mappings")
 
+-- relative numbers 
 vim.wo.relativenumber = true
+

@@ -28,10 +28,11 @@ map("i", "jk", "<ESC>", opts)  -- Fast exit from insert mode
 map("v", "<", "<gv", opts)  -- Stay in visual mode when indenting
 map("v", ">", ">gv", opts)
 
+-- map("n", "<leader>bt", ":set bg=light", opts)
 
 -- Toggleterm
 map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Terminal horizontal split" })
-map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { desc = "Terminal vertical split" })
+map("n", "<leader>tv", "<cmd>ToggleTerm size=60 direction=vertical<CR>", { desc = "Terminal vertical split" })
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Terminal float" })
 
 -- Define the on_attach function to map LSP-related keys
@@ -65,3 +66,6 @@ require('mason-lspconfig').setup_handlers({
     end,
 })
 
+-- barbar
+vim.keymap.set("n", "<leader>bn", ":BufferNext<CR>", { desc = "Buffer Next" , noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bp", ":BufferPrevious<CR>", { desc = "Buffer Next" , noremap = true, silent = true })
