@@ -1,14 +1,7 @@
--- cofig files
+-- config files
 require("config.lazy")
 require("config.colorscheme")
-
--- mason
-require("mason").setup()
-require("mason-lspconfig").setup {
-	ensure_installed = {
-		"lua_ls", "harper_ls", "golangci_lint_ls"
-	}
-}
+require("config.mason")
 
 -- nvim-tree
 vim.g.loaded_netrw = 1
