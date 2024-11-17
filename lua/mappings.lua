@@ -69,3 +69,7 @@ require('mason-lspconfig').setup_handlers({
 -- barbar
 vim.keymap.set("n", "<leader>bn", ":BufferNext<CR>", { desc = "Buffer Next" , noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bp", ":BufferPrevious<CR>", { desc = "Buffer Next" , noremap = true, silent = true })
+
+-- splitting windows
+vim.api.nvim_set_keymap('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true })  -- Vertical split
+vim.api.nvim_set_keymap('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true })   -- Horizontal split
