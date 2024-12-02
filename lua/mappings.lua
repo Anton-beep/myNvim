@@ -34,6 +34,7 @@ map("v", ">", ">gv", opts)
 map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Terminal horizontal split" })
 map("n", "<leader>tv", "<cmd>ToggleTerm size=60 direction=vertical<CR>", { desc = "Terminal vertical split" })
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Terminal float" })
+map("n", "<leader>tt", ":tab term<CR>", { desc = "Open terminal in a new tab" })
 
 -- Define the on_attach function to map LSP-related keys
 local on_attach = function(_, bufnr)
