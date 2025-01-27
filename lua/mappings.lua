@@ -19,7 +19,8 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = false, silent = true })
+map("n", "<leader>et", ":NvimTreeToggle<CR>", { noremap = false, silent = true })
+map("n", "<leader>er", ":NvimTreeRefresh<CR>", { noremap = false, silent = true })
 
 -- Insert mode mappings
 map("i", "jk", "<ESC>", opts) -- Fast exit from insert mode
@@ -76,3 +77,7 @@ vim.keymap.set("n", "<leader>bc", ":BufferClose<CR>", { desc = "Buffer Next", no
 -- splitting windows
 vim.api.nvim_set_keymap('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true }) -- Vertical split
 vim.api.nvim_set_keymap('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true })  -- Horizontal split
+
+-- copy paste
+vim.keymap.set({ "n", "x" }, "<C-S-C>", '"+y', { desc = "Copy system clipboard" })
+vim.keymap.set({ "n", "x" }, "<C-S-V>", '"+p', { desc = "Paste system clipboard" })
