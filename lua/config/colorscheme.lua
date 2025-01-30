@@ -1,3 +1,3 @@
 vim.cmd("colorscheme catppuccin-latte")
 
-vim.cmd("set background=dark")
+vim.cmd("set background=light")
