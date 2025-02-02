@@ -3,6 +3,7 @@ require("config.lazy")
 require("config.colorscheme")
 require("config.mason")
 require("config.neovide")
+require("config.lualine")
 
 -- nvim-tree
 vim.g.loaded_netrw = 1
