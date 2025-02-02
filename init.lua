@@ -4,6 +4,7 @@ require("config.colorscheme")
 require("config.mason")
 require("config.neovide")
 require("config.lualine")
+require("config.sessions")
 
 -- nvim-tree
 vim.g.loaded_netrw = 1
@@ -39,6 +40,9 @@ local lspconfig = require('lspconfig')
 
 -- mappings
 require("mappings")
+
+-- sessions
+
 
 -- other
 vim.wo.relativenumber = true
