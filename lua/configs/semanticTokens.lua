@@ -168,6 +168,7 @@ local KINDS = {
 local RULES = {
   { kind = "parameter_const", types = { "parameter" }, mods = { "readonly" } },
   { kind = "parameter", types = { "parameter" } },
+  { kind = "parameter", types = { "selfParameter", "clsParameter" } }, -- basedpyright/ty's own types for self/cls
   { kind = "enum_member", types = { "enumMember" } },
   { kind = "type_param", types = { "typeParameter" } },
   { kind = "local_const", types = { "variable" }, mods = { "readonly" } },

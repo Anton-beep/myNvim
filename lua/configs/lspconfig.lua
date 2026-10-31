@@ -83,6 +83,26 @@ vim.lsp.config("lua_ls", {
   },
 })
 
+-- basedpyright adds types, navigation and semantic tokens; ruff stays the only Python
+-- linter, formatter and import sorter. The unused-* diagnostics below repeat ruff's own
+-- unused-code findings, and its organize-imports command duplicates ruff's I001 fix, so
+-- both are switched off here.
+vim.lsp.config("basedpyright", {
+  settings = {
+    basedpyright = {
+      disableOrganizeImports = true,
+      analysis = {
+        diagnosticSeverityOverrides = {
+          reportUnusedImport = "none",
+          reportUnusedVariable = "none",
+          reportUnusedParameter = "none",
+          reportUnusedExpression = "none",
+        },
+      },
+    },
+  },
+})
+
 -- lsps with default config
 for _, server_list in pairs(servers) do
   for _, lsp in ipairs(server_list) do
